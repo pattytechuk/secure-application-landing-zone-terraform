@@ -15,3 +15,6 @@ crash.*.log
 # Local variable values
 *.tfvars
 *.tfvars.json
+
+# Ignore backend files
+backend.hcl
