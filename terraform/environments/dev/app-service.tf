@@ -40,14 +40,17 @@ resource "azurerm_linux_web_app" "api" {
   virtual_network_subnet_id = module.networking.integration_subnet_id
 
   identity {
-    type = "SystemAssigned"
-  }
+      type = "SystemAssigned"
+}
+
+
   site_config {
     minimum_tls_version = "1.2"
 
     application_stack {
       dotnet_version = "10.0"
     }
+
   }
 
   app_settings = {
