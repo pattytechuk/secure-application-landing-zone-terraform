@@ -40,8 +40,8 @@ resource "azurerm_linux_web_app" "api" {
   virtual_network_subnet_id = module.networking.integration_subnet_id
 
   identity {
-      type = "SystemAssigned"
-}
+    type = "SystemAssigned"
+  }
 
 
   site_config {
