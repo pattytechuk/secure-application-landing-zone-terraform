@@ -6,3 +6,7 @@ output "vnet_id" {
   value       = module.networking.vnet_id
 }
 
+output "api_managed_identity_principal_id" {
+  description = "Entra ID principal ID of the Dev API system-assigned managed identity"
+  value       = azurerm_linux_web_app.api.identity[0].principal_id
+}

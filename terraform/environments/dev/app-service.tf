@@ -42,12 +42,15 @@ resource "azurerm_linux_web_app" "api" {
   identity {
     type = "SystemAssigned"
   }
+
+
   site_config {
     minimum_tls_version = "1.2"
 
     application_stack {
       dotnet_version = "10.0"
     }
+
   }
 
   app_settings = {
