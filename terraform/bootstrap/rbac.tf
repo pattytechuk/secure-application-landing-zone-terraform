@@ -11,3 +11,9 @@ resource "azurerm_role_assignment" "patty_shared_state" {
   principal_id         = var.state_admin_object_id
   principal_type       = "User"
 }
+
+resource "azurerm_role_assignment" "prod_state_blob_contributor" {
+  scope                = azurerm_storage_container.state["prod"].id
+  role_definition_name = "Storage Blob Data Contributor"
+  principal_id         = var.state_admin_object_id
+}

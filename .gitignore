@@ -18,3 +18,4 @@ crash.*.log
 
 # Ignore backend files
 backend.hcl
+backend.prod.hcl
