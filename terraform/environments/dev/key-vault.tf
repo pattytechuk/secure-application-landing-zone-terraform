@@ -1,5 +1,5 @@
 resource "azurerm_key_vault" "app" {
-  name                = "kv-cirrus-dev-patty01"
+  name                = "kv-cirrus-dev-lz-dev-01"
   resource_group_name = azurerm_resource_group.app.name
   location            = azurerm_resource_group.app.location
   tenant_id           = var.tenant_id

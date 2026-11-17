@@ -1,5 +1,5 @@
 resource "azurerm_mssql_server" "app" {
-  name                          = "sql-cirrus-dev-patty01"
+  name                          = "sql-cirrus-dev"
   resource_group_name           = azurerm_resource_group.app.name
   location                      = azurerm_resource_group.app.location
   version                       = "12.0"
