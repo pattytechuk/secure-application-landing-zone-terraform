@@ -9,7 +9,7 @@ resource "azurerm_service_plan" "app" {
 }
 
 resource "azurerm_linux_web_app" "web" {
-  name                = "app-cirrus-web-dev-patty01"
+  name                = "app-cirrus-web-dev"
   resource_group_name = azurerm_resource_group.app.name
   location            = azurerm_resource_group.app.location
   service_plan_id     = azurerm_service_plan.app.id
@@ -32,7 +32,7 @@ resource "azurerm_linux_web_app" "web" {
 }
 
 resource "azurerm_linux_web_app" "api" {
-  name                      = "app-cirrus-api-dev-patty01"
+  name                      = "app-cirrus-api-dev"
   resource_group_name       = azurerm_resource_group.app.name
   location                  = azurerm_resource_group.app.location
   service_plan_id           = azurerm_service_plan.app.id
